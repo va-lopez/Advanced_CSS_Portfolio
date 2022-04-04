@@ -51,6 +51,7 @@ header nav{
     padding: 10px;
     font-weight:bold;
     font-size: 18px;
+    text-decoration:none;
 }
 
 .hero{
@@ -62,23 +63,17 @@ header nav{
     background-position: 10%;
     display:flex;
     align-items:center;
+    justify-content:flex-end;
 }
 
-/*
+
 .highlighted-text{
     margin-right: 5%;
     background-color: var(--secondary-color);
     padding:1%;
-    justify-content:center;
-}
-*/
-
-.about-me{
-    display:flex;
-    padding: 20px;
 }
 
-.subsection{
+.subheader{
     width: 30%;
     border-right:3px solid var(--primary-color);
     font-size: 48px;
@@ -87,10 +82,57 @@ header nav{
     padding-right: 10px;
 }
 
+#profile-pic{
+    width:70%;
+    height:auto;
+}
+
+.subsection{
+    display:flex;
+    padding: 20px;
+}
+
 #bio{
-    width: 60%;
+    width: 70%;
     color: var(--tertiary-color);
     text-align:left;
     padding-left:10px;
+}
+
+#projects{
+    width: 70%;
+    background-color: grey;
+    height: 200px;
+    justify-content:center;
+    margin-left:10px;
+    flex-wrap:wrap;
+    border: 3px solid var(--secondary-color);
+}
+
+#contact-info{
+    width: 70%;
+    justify-content:center;
+    margin-left: 10px;
+    display:flex;
+    align-items:center;
+    height: 20%;
+}
+
+#contact-info ul{
+    list-style:none;
+    flex-wrap:wrap;
+    justify-content:space-between;
+
+}
+
+#contact-info ul li a{
+    text-decoration:none;
+    font-size: 18px;
+    color:var(--primary-color);
+}
+
+.icon{
+    height:80%;
+    width:auto;
 }
 
