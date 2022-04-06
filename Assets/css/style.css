@@ -111,18 +111,17 @@ header nav{
 
 #contact-info{
     width: 70%;
-    justify-content:center;
     margin-left: 10px;
-    display:flex;
-    align-items:center;
     height: 20%;
+    margin:auto;
 }
 
 #contact-info ul{
     list-style:none;
     flex-wrap:wrap;
-    justify-content:space-between;
-
+    justify-content:space-around;
+    display:flex;
+    align-items:center;
 }
 
 #contact-info ul li a{
@@ -132,7 +131,7 @@ header nav{
 }
 
 .icon{
-    height:80%;
+    height:20px;
     width:auto;
 }
 
