@@ -68,15 +68,16 @@ header nav{
 
 
 .highlighted-text{
-    margin-right: 5%;
+    margin-right: 0%;
     background-color: var(--secondary-color);
     padding:1%;
+    color: var(--tertiary-color);
 }
 
 .subheader{
-    width: 30%;
+    width: 25%;
     border-right:3px solid var(--primary-color);
-    font-size: 48px;
+    font-size: 44px;
     color: var(--primary-color);
     text-align: right;
     padding-right: 10px;
@@ -99,14 +100,31 @@ header nav{
     padding-left:10px;
 }
 
-#projects{
+#project-section{
+    display:flex;
     width: 70%;
-    background-color: grey;
-    height: 200px;
-    justify-content:center;
+    justify-content:start;
     margin-left:10px;
     flex-wrap:wrap;
-    border: 3px solid var(--secondary-color);
+}
+
+.project{
+    margin-bottom:10px;
+    margin-right: 20px;
+    position:relative;
+
+}
+.project h4{
+    padding:10px;
+    position:absolute;
+    top: 70%;
+    left: 0px;
+}
+
+.project img{
+    border: 5px solid var(--secondary-color);
+    max-height: 200px;
+    height: auto;
 }
 
 #contact-info{
@@ -131,7 +149,7 @@ header nav{
 }
 
 .icon{
-    height:20px;
+    height:35px;
     width:auto;
 }
 
