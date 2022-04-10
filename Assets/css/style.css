@@ -1,10 +1,12 @@
+/* For easy editing, define variables for colors here */
 :root{
     --primary-color: #024e76;
     --secondary-color: #39a6b2;
     --tertiary-color: #36444b;
     --secondary-trans: 
 }
-
+/* Throughout the page, keep box-sizing to be border box so padding and 
+margins are added to image desired heights and widths.*/
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +14,8 @@
     font-family: Helvetica, Arial, sans-serif;
 }
 
+/*Style for parent container of this section. This holds the name, picuture,
+and role name. Here we set up flex box to create a responsive navigation.*/
 header{
     background-color: var(--tertiary-color);
     display:flex;
@@ -22,7 +26,7 @@ header{
     align-items: center;
 }
 
-
+/* this section for the teal box over the name section.*/
 #name{
     text-decoration:none;
     color:var(--tertiary-color);
@@ -34,11 +38,12 @@ header{
     flex-wrap:wrap;
     font-size:36px;
 }
-
+/*navigation*/
 header nav{
     margin: auto 20px;
 }
 
+/*navigation*/
 .nav-items{
     display:flex;
     flex-wrap:wrap;
@@ -54,7 +59,7 @@ header nav{
     font-size: 18px;
     text-decoration:none;
 }
-
+/*hero/jumbotron section*/
 .hero{
     width:100%;
     height:200px;
@@ -79,7 +84,17 @@ header nav{
     padding:1%;
     color: var(--tertiary-color);
 }
+/*end of jumbotron section*/
 
+/*start of the remaining sections*/
+
+/*Subsection is each individual section*/
+.subsection{
+    display:flex;
+    padding: 20px;
+}
+
+/*Subheader is all the section titles on the left hand of the page.*/
 .subheader{
     width: 25%;
     border-right:3px solid var(--primary-color);
@@ -89,18 +104,14 @@ header nav{
     padding-right: 10px;
 }
 
-.subsection{
-    display:flex;
-    padding: 20px;
-}
-
+/*paragraph with bio info*/
 #bio{
     width: 70%;
     color: var(--tertiary-color);
     text-align:left;
     padding-left:10px;
 }
-
+/*The parent container for the individual projects */
 #project-section{
     display:flex;
     width: 70%;
@@ -109,7 +120,7 @@ header nav{
     justify-content:space-around;
     text-align: center;
 }
-
+/*This class is for the first project, that has the larger display*/
 .project-1{
     border: 5px solid var(--secondary-color);
     margin-bottom:10px;
@@ -123,6 +134,7 @@ header nav{
     background-color: var(--secondary-color);
 }
 
+/*This class for all the smaller cards. */
 .project{
     border: 5px solid var(--secondary-color);
     margin-bottom:10px;
@@ -135,6 +147,7 @@ header nav{
     background-color: var(--secondary-color);
 }
 
+/* Individual bg information for each project card*/
 #proj-2{
     background-image: url("../images/horiseon_preview.png")
 }
@@ -151,6 +164,7 @@ header nav{
     background-image: url("../images/hero_bg.jpg")
 }
 
+/*On hover, the image becomes a bit transparent*/
 .project-1:hover {
     background-color: var(--secondary-color);
     opacity: 0.8;
@@ -160,14 +174,14 @@ header nav{
     background-color: var(--secondary-color);
     opacity: 0.6;
 }
-
+/*The last section with the contact info links*/
 #contact-info{
     width: 70%;
     margin-left: 10px;
     height: 20%;
     margin:auto;
 }
-
+/*List of contacting resources*/
 #contact-info ul{
     list-style:none;
     flex-wrap:wrap;
@@ -181,9 +195,88 @@ header nav{
     font-size: 18px;
     color:var(--primary-color);
 }
-
+/*keep the icons the same height*/
 .icon{
     height:35px;
     width:auto;
+}
+
+/*Media Query for smaller desktop screens and smaller
+Most of the adjustments are resizing font sizes and making
+sure the displays are centered;
+*/
+@media screen and (max-width: 750px){
+
+    .subheader{
+        font-size: 40px;
+    }
+
+    #name{
+        font-size:30px;
+    }
+}
+
+@media screen and (max-width: 680px){
+
+    header{
+        justify-content:center;
+        height: 100px;
+    }
+
+    #name{
+        margin-top:20px;
+        padding: 5px 20px;
+        font-size:36px;
+    }
+
+    .subheader{
+        font-size: 26px;
+    }
+
+    #contact-info ul{
+        justify-content:flex-start;
+    }
+    
+    #contact-info ul li{
+        margin: 5px;
+        width: 100%;
+    }
+
+}
+
+/* When the screen becoms less than 450px, the layout changes so that the
+subheaders take up the full width, and the contents of that section are
+displayed beneath them*/
+
+@media screen and (max-width: 450px){
+    .nav-items a {
+        font-size:12px;
+    }
+
+    .subsection{
+        display:block;
+        padding: 10px;
+    }
+
+    .subheader{
+        width: 100%;
+        border-right:none;
+        border-bottom: 3px solid var(--primary-color);
+        text-align: center;
+        padding-bottom: 10px;
+        justify-content:center;
+    }
+
+    #bio{
+        width: 100%;
+        text-align:left;
+        margin: 10px auto;
+    }
+
+    #project-section, #contact-info{
+        margin: 10px auto;
+        width: 100%;
+        text-align:center;
+    }
 }
 
