@@ -2,6 +2,7 @@
     --primary-color: #024e76;
     --secondary-color: #39a6b2;
     --tertiary-color: #36444b;
+    --secondary-trans: 
 }
 
 * {
@@ -29,7 +30,7 @@ header{
     font-weight: bold;
     justify-content:flex-end;
     align-items:center;
-    padding: 2px;
+    padding: 5px 20px;
     flex-wrap:wrap;
     font-size:36px;
 }
@@ -63,9 +64,14 @@ header nav{
     background-position: 10%;
     display:flex;
     align-items:center;
-    justify-content:flex-end;
+    justify-content:space-between;
 }
 
+.hero img{
+    height: 70%;
+    width: auto;
+    margin: 20px;
+}
 
 .highlighted-text{
     margin-right: 0%;
@@ -83,11 +89,6 @@ header nav{
     padding-right: 10px;
 }
 
-#profile-pic{
-    width:70%;
-    height:auto;
-}
-
 .subsection{
     display:flex;
     padding: 20px;
@@ -103,28 +104,61 @@ header nav{
 #project-section{
     display:flex;
     width: 70%;
-    justify-content:start;
     margin-left:10px;
     flex-wrap:wrap;
+    justify-content:space-around;
+    text-align: center;
+}
+
+.project-1{
+    border: 5px solid var(--secondary-color);
+    margin-bottom:10px;
+    height: 300px;
+    width: 98%;
+    background-image: url("../images/run_buddy_preview.png");
+    background-size:cover;
+    display:flex;
+    align-items:flex-end;
+    justify-content:flex-start;
+    background-color: var(--secondary-color);
 }
 
 .project{
-    margin-bottom:10px;
-    margin-right: 20px;
-    position:relative;
-
-}
-.project h4{
-    padding:10px;
-    position:absolute;
-    top: 70%;
-    left: 0px;
-}
-
-.project img{
     border: 5px solid var(--secondary-color);
-    max-height: 200px;
-    height: auto;
+    margin-bottom:10px;
+    height: 150px;
+    width: 48%;
+    background-size:cover;
+    display:flex;
+    align-items:flex-end;
+    justify-content:flex-start;
+    background-color: var(--secondary-color);
+}
+
+#proj-2{
+    background-image: url("../images/horiseon_preview.png")
+}
+
+#proj-3{
+    background-image: url("../images/preview_3.jpg")
+}
+
+#proj-4{
+    background-image: url("../images/preview_4.jpg")
+}
+
+#proj-5{
+    background-image: url("../images/hero_bg.jpg")
+}
+
+.project-1:hover {
+    background-color: var(--secondary-color);
+    opacity: 0.8;
+}
+
+#proj-2:hover, #proj-3:hover, #proj-4:hover, #proj-5:hover {
+    background-color: var(--secondary-color);
+    opacity: 0.6;
 }
 
 #contact-info{
