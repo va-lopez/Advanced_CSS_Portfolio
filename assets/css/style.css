@@ -149,19 +149,19 @@ header nav{
 
 /* Individual bg information for each project card*/
 #proj-2{
-    background-image: url("../images/horiseon_preview.png")
+    background-image: url("../images/horiseon_preview.png");
 }
 
 #proj-3{
-    background-image: url("../images/password_gen_preview.png")
+    background-image: url("../images/password_gen_preview.png");
 }
 
 #proj-4{
-    background-image: url("../images/recipe_site.png")
+    background-image: url("../images/recipe_site.png");
 }
 
 #proj-5{
-    background-image: url("../images/employeeAide.PNG")
+    background-image: url("../images/employeeAide.PNG");
 }
 
 /*On hover, the image becomes a bit transparent*/
